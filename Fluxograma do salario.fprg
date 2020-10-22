@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Matheus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-10-22 02:25:16 "/>
+        <attribute name="created" value="TWF0aGV1cztNSUtTWkE7MjAyMC0xMC0yMDsiMDU6MDk6NTAgIjsyMzcx"/>
+        <attribute name="edited" value="TWF0aGV1cztNSUtTWkE7MjAyMC0xMC0yMjsiMDI6MjU6MTYgIjs0OzI0ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nome" type="String" array="False" size=""/>
+            <declare name="janeiro, fevereiro, marco, abril, media, bonificacao" type="Real" array="False" size=""/>
+            <declare name="salario" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite seu nome&quot;" newline="True"/>
+            <input variable="Nome"/>
+            <output expression="&quot;Qual seu salario atual?&quot;" newline="True"/>
+            <input variable="salario"/>
+            <output expression="&quot;Suas vendas de Janeiro&quot;" newline="True"/>
+            <input variable="janeiro"/>
+            <output expression="&quot;Suas vendas de Fevereiro&quot;" newline="True"/>
+            <input variable="fevereiro"/>
+            <output expression="&quot;Suas vendas de Mar&#231;o&quot;" newline="True"/>
+            <input variable="marco"/>
+            <output expression="&quot;Suas vendas de Abril&quot;" newline="True"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro+fevereiro+marco+abril)/4"/>
+            <assign variable="bonificacao" expression="(media)/100*15"/>
+            <assign variable="salario" expression="(Bonificacao+salario)"/>
+            <output expression="media" newline="True"/>
+            <if expression="media&gt;= 5000">
+                <then>
+                    <output expression="&quot;Parabeins!! &quot; &amp; nome &amp; &quot; Voce teve um mes maravilhoso, e tera uma bonifica&#231;&#227;o de 15% de suas comi&#231;&#245;es seu salario desse mes sera de &quot; &amp; salario" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Quase la!! mais estamos com voce no proximo mes vamos com tudo&quot;" newline="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
